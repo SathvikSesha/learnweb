@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #maindiv{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+        }
+        #div1{
+            background-image: url(sunrise.jpg);
+            width: 50%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-right: 5px solid black;
+            transition: all 2s ease-in-out;
+        }
+        #div2{
+            background-image: url(moon.jpg);
+            width: 50%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: all 2s ease-in-out;
+        }
+        #button{
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0%;
+        }
+        button{
+            font-size: 20px;
+            font-weight: 600;
+            height: 45px;
+            width: 120px;
+            border-radius: 10px;
+            color: rgb(62, 1, 1);
+            background-image: linear-gradient(to right,rgb(244, 170, 74,0.8),rgba(74, 187, 244, 0.858));
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2),2px 4px 10px 0 rgba(255, 254, 254, 0.19);
+            border: 1px solid black;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function:cubic-bezier(0.95, 0.05, 0.795, 0.035);
+        }
+        button:hover{
+            background-image: linear-gradient(to right,rgba(74, 187, 244, 0.858),rgb(244, 170, 74,0.8));
+        }
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <div id="div1"></div>
+        <div id="div2"></div>
+    </div>
+    <div id="button">
+        <button id="mode" onclick="modes(event)">Day Light</button>
+    </div>
+    <script>
+        function modes(event) {
+                event.preventDefault();
+                let text = document.getElementById('mode').innerText;
+                if (text == 'Day Light') {
+                    document.getElementById('mode').innerText = 'Moon Light';
+                    document.getElementById('mode').style.fontSize="18px";
+                    document.getElementById('div2').style.width="100vw";
+                    document.getElementById('div1').style.width="20vw";
+                }
+                else if (text == 'Moon Light') {
+                    document.getElementById('mode').style.fontSize="20px";
+                    document.getElementById('mode').innerText = 'Day Light';
+                    document.getElementById('div1').style.width="100vw";
+                    document.getElementById('div2').style.width="20vw";
+                    
+                }
+            }
+    </script>
+</body>
+</html>

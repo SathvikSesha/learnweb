@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgba(82, 130, 156, 0.5), rgba(64, 122, 108, 0.5));
+            text-align: center;
+        }
+        .container {
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #calculation {
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+            border: none;
+            margin: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+        #calculation:hover {
+            border: 2px solid rgba(2, 2, 27, 0.5);
+        }
+        #result {
+            width: 400px;
+            font-size: 24px;
+            font-weight: bold;
+            animation: blink 4s ease-in-out infinite alternate;
+        }
+        @keyframes blink {
+            from {
+                color: antiquewhite;
+            }
+            to {
+                color: black;
+            }
+        }
+        #submit {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: darkcyan;
+            color: white;
+            border: none;
+        }
+        #submit:hover {
+            background-color: darkslategray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="calculation" placeholder="Enter the expression">
+        <button id="submit">Calculate</button>
+        <p id="result">Hi, welcome to the calculator</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

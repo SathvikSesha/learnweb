@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type of HTML lists</title>
+    <style>
+        * {
+            background-color: aquamarine;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .lists {
+            width: 90%;
+            padding: 25px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        dl dt,
+        dd {
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML LISTS</h1>
+    <div class="lists">
+        <div class="left">
+            <h2>Un-Ordered List</h2>
+            <ul style="list-style-type: circle;">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ul>
+            <ul style="list-style-type: disc;">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ul>
+            <ul style="list-style-type: square;">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ul>
+        </div>
+        <div class="middle">
+            <h2>Ordered List</h2>
+            <ol type="1">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ol>
+            <ol type="A">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ol>
+            <ol type="I" start="100">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+            </ol>
+        </div>
+        <div class="right">
+            <h2>Description List</h2>
+            <dl>
+                <dt>Coffee</dt>
+                <dd>- Coffee is a hot black drink</dd>
+                <dt>Milk</dt>
+                <dd>- Milk is a hot white drink</dd>
+                <dt>Soft Drinks</dt>
+                <dd>- These are cool carbonated drinks</dd>
+            </dl>
+
+        </div>
+    </div>
+</body>
+
+</html>

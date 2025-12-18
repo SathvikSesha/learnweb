@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        * {
+            background-color: rgb(244, 242, 245);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+            margin-top: 48px;
+            border-radius: 10px;
+        }
+
+        tr {
+            height: 52px;
+        }
+
+        thead th,
+        tbody th {
+            background-color: antiquewhite;
+        }
+
+        th,
+        td {
+            min-width: 36px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        td:hover {
+            background-color: rgb(211, 234, 254);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Time Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>9.00 - 10.00</th>
+                <th>10.00 - 11.00</th>
+                <th>11.00 - 12.00</th>
+                <th>12.00 - 1.00</th>
+                <th>1.00 - 2.00</th>
+                <th>2.00 - 3.00</th>
+                <th>3.00 - 4.00</th>
+                <th>4.00 - 5.00</th>
+                <th>5.00 - 6.00</th>
+                <th>6.00 - 7.00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Tue</th>
+                <td>A1-STS4006 <br> CB416</td>
+                <td>B1-CSE1008 <br> CB524</td>
+                <td>TC1-MAT2003 <br> CB113</td>
+                <td>D1-CSE4004 <br> CB510</td>
+                <th>L</th>
+                <td>F2-FRL1001 <br> CBG-16</td>
+                <td colspan="4" title="Happy time">No Class Hours</td>
+            </tr>
+            <tr>
+                <th>Wed</th>
+                <td>D1-CSE4004 <br> CB510</td>
+                <td>F1-CSE2004 <br> CB513</td>
+                <td>No class</td>
+                <td>B1-CSE1008 <br> CB524</td>
+                <th>U</th>
+                <td colspan="2" title="OT Lab">L37+L38-MAT2003 <br> CB122</td>
+                <td colspan="3" title="Happy time">No class Hours</td>
+            </tr>
+            <tr>
+                <th>Thu</th>
+                <td>TC1-MAT2003 <br> CB113</td>
+                <td>TD1-CSE4004 <br> CB510</td>
+                <td>No class</td>
+                <td>TBB1-CSE1008 <br> CB524</td>
+                <th>N</th>
+                <td colspan="2" title="Web Tech Lab">L43+L44-CSE4004 <br> CB502B</td>
+                <td colspan="3" title="Happy time">No Class Hours</td>
+            </tr>
+            <tr>
+                <th>Fri</th>
+                <td>TA1-STS4006 <br> CB416</td>
+                <td>TB1-CSE1008 <br> CB524</td>
+                <td>F1-CSE2004 <br> CB513</td>
+                <td>No class</td>
+                <th>C</th>
+                <td colspan="3" title="Happy time">No Class Hours</td>
+                <td>F2-FRL1001 <br> CBG16</td>
+                <td>No Class</td>
+            </tr>
+            <tr>
+                <th>Sat</th>
+                <td>No Class</td>
+                <td>C1-MAT2003 <br> CB113</td>
+                <td>TF1-CSE2004 <br> CB513</td>
+                <td>A1-STS4006 <br> CB416</td>
+                <th>H</th>
+                <td colspan="5" title="Happy time">No Class Hours</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="11">All the data is Verified</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

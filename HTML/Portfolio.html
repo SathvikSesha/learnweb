@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            position: relative;
+        }
+
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 10px 0;
+            list-style: none;
+        }
+
+        header {
+            background-color: rgba(2, 40, 43, 0.863);
+        }
+
+        .title,
+        nav {
+            background-color: transparent;
+        }
+
+
+        .title {
+            min-height: 118px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: rgb(255, 255, 255);
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgba(233, 230, 250, 0.952);
+            padding: 8px;
+        }
+
+        section {
+            scroll-margin-top: 172px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(241, 187, 252);
+            border-bottom: 2px solid rgb(241, 187, 252);
+        }
+
+        .card {
+            background-color: aliceblue;
+            padding: 25px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.19);
+        }
+
+        .Aboutcard {
+            background-color: aliceblue;
+            padding: 25px;
+            margin: 36px auto;
+            width: 42%;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.19);
+        }
+
+        #About {
+            padding: 36px;
+            display: flex;
+            gap: 48px;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+
+
+        figure img {
+            width: 140px;
+            height: 156px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 2px solid rgb(1, 75, 1);
+        }
+
+        p {
+            letter-spacing: 1.2px;
+        }
+
+        h2 {
+            color: rgb(128, 122, 122);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid burlywood;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        tfoot td {
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            background-color: aliceblue;
+            padding: 18px;
+            color: blueviolet;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        section h2 {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>Sesha Sathvik</h1>
+            <br>
+            <div class="para">
+                <p><i>Computer Science Student </i>| <strong>Java Developer</strong> | <em>AIML Enthusiastic</em></p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="About" class="Aboutcard">
+            <figure>
+                <img src="image.png" alt="personal">
+                <figcaption>Profile Picture</figcaption>
+            </figure>
+            <article>
+                <h2>About</h2>
+                <p><strong>Date of Birth:</strong> 31 January 2006</p>
+                <p><strong>Gender:</strong> MALE</p>
+                <p><strong>Nationality:</strong> INDIAN</p>
+                <p><strong>State:</strong> Andhra Pradesh</p>
+                <p><strong>Languages: </strong> Telugu , English , Hindi</p>
+            </article>
+        </section>
+        <hr>
+        <section id="Education" class="card">
+            <h2>Education</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                        <th>Year of passing</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bachelor of Techonology</td>
+                        <td>VIT-AP University</td>
+                        <td>2027</td>
+                        <td>9.34</td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate</td>
+                        <td>Sri Chaitanya</td>
+                        <td>2023</td>
+                        <td>97.3</td>
+                    </tr>
+                    <tr>
+                        <td>Class 10</td>
+                        <td>PMC</td>
+                        <td>2021</td>
+                        <td>99</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Records Verfied</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="Projects" class="card">
+            <h2>Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name of Project</th>
+                        <th>Description</th>
+                        <th>Tech Stack</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lost and found Application</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatibus obcaecati
+                            dolorem exercitationem temporibus labore. Vitae reprehenderit doloremque quaerat aperiam?
+                        </td>
+                        <td>ReactJS, Java SpringBoot, MySQL</td>
+                    </tr>
+                    <tr>
+                        <td>Fuzzy Based Washing Machine</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatibus obcaecati
+                            dolorem exercitationem temporibus labore. Vitae reprehenderit doloremque quaerat aperiam?
+                        </td>
+                        <td>HTML ,Tailwind ,JAVASCRIPT ,Flask ,Scikitlearn(skfuzzy)</td>
+                    </tr>
+                    <tr>
+                        <td>Lost and found Application</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatibus obcaecati
+                            dolorem exercitationem temporibus labore. Vitae reprehenderit doloremque quaerat aperiam?
+                        </td>
+                        <td>ReactJS, Java SpringBoot, MySQL</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="skills" class="card">
+            <h2>Skills</h2>
+            <ol style="padding-left: 40px;">
+                <li>Proficient in Frontend Development (HTML,CSS,JAVASCRIPT,REACT)</li>
+                <li>Well known Server Side Programming(SpringBoot,NodeJs)</li>
+                <li>AI and Machine Learning Developer</li>
+                <li>Good at team building and leadership</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section id="contact" class="card">
+            <h2><em>Contact</em> </h2>
+            <p>
+                <strong>Phone:</strong> +91 9347635523 <br>
+                <strong>Email:</strong> sathviksesha@gmail.com <br>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

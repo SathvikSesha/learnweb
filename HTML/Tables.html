@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tables</title>
     <style>
-        * {
+        body {
             background-color: rgb(244, 242, 245);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         h1 {
+            margin-top: 50px;
             text-align: center;
+            text-decoration: underline;
         }
 
         table {
             width: 100%;
-            border: 1px solid black;
-            padding: 5px;
-            text-align: center;
             margin-top: 48px;
+            border-collapse: collapse;
             border-radius: 10px;
         }
 
@@ -28,19 +28,32 @@
             height: 52px;
         }
 
-        thead th,
+        thead th {
+            background-color: #CCCCFF;
+        }
+
         tbody th {
-            background-color: antiquewhite;
+            background-color: #E2E2E2;
+        }
+
+        tbody td {
+            background-color: rgb(248, 255, 205);
+        }
+
+        tbody .col {
+            background-color: #CCFF33;
         }
 
         th,
         td {
-            min-width: 36px;
+            min-width: 95px;
             border: 1px solid black;
-            border-radius: 5px;
+            padding: 6px;
+            text-align: center;
         }
 
-        td:hover {
+        td:hover,
+        th:hover {
             background-color: rgb(211, 234, 254);
         }
     </style>
@@ -51,74 +64,154 @@
     <table>
         <thead>
             <tr>
-                <th>Day</th>
-                <th>9.00 - 10.00</th>
-                <th>10.00 - 11.00</th>
-                <th>11.00 - 12.00</th>
-                <th>12.00 - 1.00</th>
-                <th>1.00 - 2.00</th>
-                <th>2.00 - 3.00</th>
-                <th>3.00 - 4.00</th>
-                <th>4.00 - 5.00</th>
-                <th>5.00 - 6.00</th>
-                <th>6.00 - 7.00</th>
+                <th rowspan="2">Theory</th>
+                <th>Start</th>
+                <th>9.00</th>
+                <th>10.00</th>
+                <th>11.00</th>
+                <th>12.00</th>
+                <th>LUNCH</th>
+                <th>14.00</th>
+                <th>15.00</th>
+                <th>16.00</th>
+                <th>17.00</th>
+                <th>18.00</th>
+            </tr>
+            <tr>
+                <th>End</th>
+                <th>9.50</th>
+                <th>10.50</th>
+                <th>11.50</th>
+                <th>12.50</th>
+                <th>LUNCH</th>
+                <th>14.50</th>
+                <th>15.50</th>
+                <th>16.50</th>
+                <th>17.50</th>
+                <th>18.50</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Lab</th>
+                <th>Start</th>
+                <th>9.00</th>
+                <th>10.00</th>
+                <th>11.00</th>
+                <th>12.00</th>
+                <th>LUNCH</th>
+                <th>14.00</th>
+                <th>15.00</th>
+                <th>16.00</th>
+                <th>17.00</th>
+                <th>18.00</th>
+            </tr>
+            <tr>
+                <th>End</th>
+                <th>9.50</th>
+                <th>10.40</th>
+                <th>11.50</th>
+                <th>12.40</th>
+                <th>LUNCH</th>
+                <th>14.50</th>
+                <th>15.40</th>
+                <th>16.50</th>
+                <th>17.40</th>
+                <th>18.50</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Tue</th>
-                <td>A1-STS4006 <br> CB416</td>
-                <td>B1-CSE1008 <br> CB524</td>
-                <td>TC1-MAT2003 <br> CB113</td>
-                <td>D1-CSE4004 <br> CB510</td>
-                <th>L</th>
-                <td>F2-FRL1001 <br> CBG-16</td>
+                <th rowspan="2">Tue</th>
+                <th>Theory</th>
+                <td class="col">A1-STS4006 <br> CB416</td>
+                <td class="col">B1-CSE1008 <br> CB524</td>
+                <td class="col">TC1-MAT2003 <br> CB113</td>
+                <td class="col">D1-CSE4004 <br> CB510</td>
+                <th>LUNCH</th>
+                <td class="col">F2-FRL1001 <br> CBG-16</td>
                 <td colspan="4" title="Happy time">No Class Hours</td>
             </tr>
             <tr>
-                <th>Wed</th>
-                <td>D1-CSE4004 <br> CB510</td>
-                <td>F1-CSE2004 <br> CB513</td>
+                <th>Lab</th>
+                <td colspan="4" title="Happy time">-</td>
+                <th>LUNCH</th>
+                <td colspan="5" title="Happy time">No Labs</td>
+
+            </tr>
+
+            <tr>
+                <th rowspan="2">Wed</th>
+                <th>Theory</th>
+                <td class="col">D1-CSE4004 <br> CB510</td>
+                <td class="col">F1-CSE2004 <br> CB513</td>
                 <td>No class</td>
-                <td>B1-CSE1008 <br> CB524</td>
-                <th>U</th>
-                <td colspan="2" title="OT Lab">L37+L38-MAT2003 <br> CB122</td>
-                <td colspan="3" title="Happy time">No class Hours</td>
+                <td class="col">B1-CSE1008 <br> CB524</td>
+                <th>LUNCH</th>
+                <td colspan="5" title="Lab and Happy time">No class Hours</td>
             </tr>
             <tr>
-                <th>Thu</th>
-                <td>TC1-MAT2003 <br> CB113</td>
-                <td>TD1-CSE4004 <br> CB510</td>
-                <td>No class</td>
-                <td>TBB1-CSE1008 <br> CB524</td>
-                <th>N</th>
-                <td colspan="2" title="Web Tech Lab">L43+L44-CSE4004 <br> CB502B</td>
-                <td colspan="3" title="Happy time">No Class Hours</td>
+                <th>Lab</th>
+                <td colspan="4" title="Happy time">-</td>
+                <th>LUNCH</th>
+                <td colspan="2" title="OT Lab" class="col">L37+L38-MAT2003 <br> CB122</td>
+                <td colspan="3" title="Happy time">No Labs</td>
+
             </tr>
             <tr>
-                <th>Fri</th>
-                <td>TA1-STS4006 <br> CB416</td>
-                <td>TB1-CSE1008 <br> CB524</td>
-                <td>F1-CSE2004 <br> CB513</td>
+                <th rowspan="2">Thu</th>
+                <th>Theory</th>
+                <td class="col">TC1-MAT2003 <br> CB113</td>
+                <td class="col">TD1-CSE4004 <br> CB510</td>
                 <td>No class</td>
-                <th>C</th>
+                <td class="col">TBB1-CSE1008 <br> CB524</td>
+                <th>LUNCH</th>
+                <td colspan="5" title="Lab and Happy time">No Class Hours</td>
+            </tr>
+            <tr>
+                <th>Lab</th>
+                <td colspan="4" title="Happy time">-</td>
+                <th>LUNCH</th>
+                <td colspan="2" title="OT Lab" class="col">L37+L38-MAT2003 <br> CB122</td>
+                <td colspan="3" title="Happy time">No Labs</td>
+
+            </tr>
+            <tr>
+                <th rowspan="2">Fri</th>
+                <th>Theory</th>
+                <td class="col">TA1-STS4006 <br> CB416</td>
+                <td class="col">TB1-CSE1008 <br> CB524</td>
+                <td class="col">F1-CSE2004 <br> CB513</td>
+                <td>No class</td>
+                <th>LUNCH</th>
                 <td colspan="3" title="Happy time">No Class Hours</td>
-                <td>F2-FRL1001 <br> CBG16</td>
+                <td class="col">F2-FRL1001 <br> CBG16</td>
                 <td>No Class</td>
             </tr>
             <tr>
-                <th>Sat</th>
-                <td>No Class</td>
-                <td>C1-MAT2003 <br> CB113</td>
-                <td>TF1-CSE2004 <br> CB513</td>
-                <td>A1-STS4006 <br> CB416</td>
-                <th>H</th>
-                <td colspan="5" title="Happy time">No Class Hours</td>
+                <th>Lab</th>
+                <td colspan="4" title="Happy time">-</td>
+                <th>LUNCH</th>
+                <td colspan="5" title="Happy time">-</td>
+
+            </tr>
+            <tr>
+                <th rowspan="2">Sat</th>
+                <th>Theory</th>
+                <td class="col">No Class</td>
+                <td class="col">C1-MAT2003 <br> CB113</td>
+                <td class="col">TF1-CSE2004 <br> CB513</td>
+                <td class="col">A1-STS4006 <br> CB416</td>
+                <th>LUNCH</th>
+                <td colspan="5" title="Happy time" rowspan="2">No Class and Lab Hours</td>
+            </tr>
+            <tr>
+                <th>Lab</th>
+                <td colspan="4" title="Happy time">-</td>
+                <th>LUNCH</th>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="11">All the data is Verified</th>
+                <th colspan="12">All the data is Verified</th>
             </tr>
         </tfoot>
     </table>

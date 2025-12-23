@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tags</title>
+    <link rel="stylesheet" href="revision.css">
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <h1>All HTML TAGS</h1>
+            <nav class="right">
+                <div class="nav-bar">
+                    <a href="#Bt">Basic Tags</a>
+                    <a href="#Hl">HTML Lists</a>
+                    <a href="#Ht">HTML Tables</a>
+                    <a href="#Hf">HTML Forms</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="Home">
+            <div class="contents">
+                <h2>HTML INTRODUCTION</h2>
+                <div class="box">
+                    <div class="Hcard">
+                        <h3>What is HTML ?</h3>
+                        <ul>
+                            <li>HTML stands for <b>Hyper Text Markup Language</b></li>
+                            <li>HTML is the standard markup language for Web pages.</li>
+                            <li>With HTML you can create your own Website.</li>
+                            <li>HTML is easy to learn - You will enjoy it</li>
+                            <li>HTML elements tell the browser how to display the content</li>
+                        </ul>
+                    </div>
+                    <div class="Rcard">
+                        <h3 style="text-align: center;">A Simple HTML Document</h3>
+                        <div class="doc">
+                            <div class="left">
+                                <p>&lt;!DOCTYPE html&gt;</p>
+                                <p>&lt;html&gt;</p>
+                                <p>&lt;head&gt;</p>
+                                <p style="padding-left: 18px;">&lt;title&gt; Page Title &lt;/title&gt;</p>
+                                <p> &lt;/head&gt;</p>
+                                <p> &lt;body&gt;</p>
+                                <p style="padding-left: 18px;">&lt;h1&gt;My First Heading&lt;/h1&gt;</p>
+                                <p style="padding-left: 18px;">&lt;p&gt;My first Paragraph &lt;/p&gt;</p>
+                                <p>&lt;/body&gt;</p>
+                                <p>&lt;/html&gt;</p>
+                            </div>
+                            <div class="right">
+                                <p><span> &lt;!DOCTYPE html&gt;</span> defines that this document is an
+                                    HTML5.
+                                </p>
+                                <p><span> &lt;html&gt;</span> element is the root element of an HTML page</p>
+                                <p><span> &lt;head&gt;</span> contains meta information about the HTML page</p>
+                                <p><span> &lt;title&gt;</span> element specifies a title for the HTML page </p>
+                                <p><span> &lt;body&gt;</span> element defines the document's body</p>
+                                <p><span> &lt;h1&gt;</span> element defines a large heading</p>
+                                <p> <span> &lt;p&gt;</span> element defines a paragraph</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Bt" id="Bt">
+            <h2>Basic Tags</h2>
+            <div class="content">
+                <div class="card">
+                    <h3>Header Tag</h3>
+                    <div style="padding: 5px; margin-top:4px;">
+                        <p><span> &lt;h1&gt;</span>
+                            element defines a large heading</p>
+                    </div>
+                    <div class="heads">
+                        <p><strong>&lt;h1&gt;</strong>Heading 1 <strong>&lt;/h1&gt;</strong>
+                        </p>
+                        <p><strong>&lt;h2&gt;</strong>Heading 2 <strong>&lt;/h2&gt;</strong>
+                        </p>
+                        <p><strong>&lt;h3&gt;</strong>Heading 3 <strong>&lt;/h3&gt;</strong>
+                        </p>
+                        <p><strong>&lt;h4&gt;</strong>Heading 4 <strong>&lt;/h4&gt;</strong>
+                        </p>
+                        <p><strong>&lt;h5&gt;</strong>Heading 5 <strong>&lt;/h5&gt;</strong>
+                        </p>
+                        <p><strong>&lt;h6&gt;</strong>Heading 6&lt; <strong>/h6&gt;</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Paragraph Tag</h3>
+                    <div style="padding: 5px; margin-top:4px;">
+                        <p><span> &lt;p&gt;</span>
+                            element defines a paragraph</p>
+                    </div>
+                    <div class="para">
+                        <p><strong>&lt;p&gt;</strong>My first Paragraph
+                            <strong>&lt;/p&gt;</strong>
+                        </p>
+                        <p> <strong>&lt;br&gt;</strong> element defines a line break</p>
+                        <p> <strong>&lt;hr&gt;</strong> element defines a thematic break</p>
+                        <p><strong>&lt;p&gt;</strong>My Second Paragraph
+                            <strong>&lt;/p&gt;</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Image Tag</h3>
+                    <div style="padding: 3px; margin-top:8px;">
+                        <p>The HTML<span>
+                                &lt;img&gt;</span> tag is used to embed an image in a web page.</p>
+                    </div>
+                    <div class="imgs">
+                        <p style="margin-bottom: 5px;">The HTML <span> &lt;img&gt;</span> tag has two required
+                            attributes:</p>
+                        <ul>
+                            <li><i><strong>src</strong></i> - Specifies the path to the image</li>
+                            <li><i><strong>alt</strong></i> - Specifies an alternate text for the image</li>
+                        </ul>
+                    </div>
+                    <div class="imgcard">
+                        <p><b>&lt;img</b> src = "image.png" alt = "HTML image" <b>/&gt;</b></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Anchor Tag</h3>
+                    <div style="padding: 5px; margin-top:8px;">
+                        <p>The HTML <span> &lt;a&gt;</span>
+                            tag defines a hyperlink.</p>
+                        <p style="font-size: 14px; margin-top:6px;">The <span>target</span> attribute specifies where to
+                            open the linked
+                            document.</p>
+                    </div>
+                    <div class="acard">
+                        <p><b>&lt;a</b> href = "URL" target = "_blank" <b>&gt;</b>Google<b>&lt;/a&gt;</b></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Video Tag</h3>
+                    <div style="padding: 3px; margin-top:8px;">
+                        <p>The HTML <span>
+                                &lt;video&gt;</span>lement is used to show a video on a web page.</p>
+                    </div>
+                    <div class="vcard">
+                        <p><strong>&lt;video</strong> width="320"
+                            controls <strong>&gt;</strong>
+                        </p>
+                        <p><strong>&lt;source</strong> src="movie.mp4"
+                            type="video/mp4"<strong>&gt;</strong>
+                        </p>
+                        <p>
+                            <strong>&lt;/video&gt;</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="card cds">
+                    <h3>Formatting Tags</h3>
+                    <p><span> &lt;b&gt;</span> - Bold text</p>
+                    <p><span> &lt;strong&gt;</span> - Important text</p>
+                    <p><span> &lt;i&gt;</span> - Italic text</p>
+                    <p><span> &lt;em&gt;</span> - Emphasis text</p>
+                    <p><span> &lt;sup&gt;</span> - Superscript Text</p>
+                    <p><span> &lt;sub&gt;</span> - Subscript Text</p>
+                </div>
+            </div>
+            <button id="btn"><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">Learn
+                    more</a></button>
+        </section>
+        <section class="Hl" id="Hl">
+            <h2>HTML Lists</h2>
+            <h4>HTML lists allow web developers to group a set of related items in lists.</h4>
+            <div class="content">
+                <div class="cards">
+                    <h3>Unordered Lists</h3>
+                    <div>
+                        <p>
+                            An unordered list starts with the <span> &lt;ul&gt;</span> tag. Each list item starts with
+                            the
+                            <span> &lt;li&gt;</span> tag.
+                        </p>
+                    </div>
+                    <div class="matter">
+                        <p><strong>&lt;ul&gt;</strong></p>
+                        <p class="inner"><strong>&lt;li&gt;</strong>Coffee <strong>&lt;li&gt;</strong></p>
+                        <p class="inner"><strong>&lt;li&gt;</strong>Tea <strong>&lt;li&gt;</strong></p>
+                        <p class="inner"><strong>&lt;li&gt;</strong>Milk <strong>&lt;li&gt;</strong></p>
+                        <p><strong>&lt;/ul&gt;</strong></p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <h3>Ordered Lists</h3>
+                    <div>
+                        <p>
+                            An ordered list starts with the <span> &lt;ol&gt;</span> tag. Each list item starts with
+                            the
+                            <span> &lt;li&gt;</span> tag.
+                        </p>
+                    </div>
+                    <div class="matter">
+                        <p><strong>&lt;ol&gt;</strong></p>
+                        <p class="inner"><strong>&lt;li&gt;</strong>Coffee <strong>&lt;li&gt;</strong></p>
+                        <p class="inner"><strong>&lt;li&gt;</strong>Tea <strong>&lt;li&gt;</strong></p>
+                        <p class="inner"><strong>&lt;li&gt;</strong>Milk <strong>&lt;li&gt;</strong></p>
+                        <p><strong>&lt;/ol&gt;</strong></p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <h3>Description List</h3>
+                    <div>
+                        <p style="font-size: 14px;">
+                            The <span> &lt;dl&gt;</span> defines the description list. the <span>
+                                &lt;dt&gt;</span>tag defines the term, and <span> &lt;dd&gt;</span>tag
+                            describes each term:
+                        </p>
+                    </div>
+                    <div class="matter">
+                        <p><strong>&lt;dl&gt;</strong></p>
+                        <p class="inner"><strong>&lt;dt&gt;</strong>Coffee <strong>&lt;dt&gt;</strong></p>
+                        <p class="inner"><strong>&lt;dd&gt;</strong>- black hot drink <strong>&lt;li&gt;</strong></p>
+                        <p><strong>&lt;/ol&gt;</strong></p>
+                    </div>
+                </div>
+            </div>
+            <button id="btn"><a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">Learn
+                    more</a></button>
+        </section>
+        <section class="Ht" id="Ht">
+            <h2>HTML Tables</h2>
+            <h4>HTML tables allow web developers to arrange data into rows and columns.</h4>
+            <div class="content">
+                <div class="crd">
+                    <h3>Table Layout</h3>
+                    <div class="tblay">
+                        <p><strong>&lt;table&gt;</strong></p>
+                        <p><strong>&lt;tr&gt;</strong></p>
+                        <p class="inner"><strong>&lt;th&gt;</strong> Company
+                            <strong>&lt;/th&gt;</strong>
+                        </p>
+                        <p class="inner"><strong>&lt;th&gt;</strong> Contact
+                            <strong>&lt;/th&gt;</strong>
+                        </p>
+                        <p class="inner"><strong>&lt;th&gt;</strong> Country
+                            <strong>&lt;/th&gt;</strong>
+                        </p>
+                        <p><strong>&lt;/tr&gt;</strong></p>
+                        <p><strong>&lt;tr&gt;</strong></p>
+                        <p class="inner"><strong>&lt;td&gt;</strong> Alfreds Futterkiste
+                            <strong>&lt;/td&gt;</strong>
+                        </p>
+                        <p class="inner"><strong>&lt;td&gt;</strong> Maria Anders
+                            <strong>&lt;/td&gt;</strong>
+                        </p>
+                        <p class="inner"><strong>&lt;td&gt;</strong> Germany
+                            <strong>&lt;/td&gt;</strong>
+                        </p>
+                        <p><strong>&lt;/tr&gt;</strong></p>
+                        <p><strong>&lt;/table&gt;</strong></p>
+                    </div>
+                </div>
+                <div class="crd cds">
+                    <h3>Table Tags</h3>
+                    <p><span> &lt;table&gt;</span> - Defines a table</p>
+                    <p><span> &lt;th&gt;</span> - Defines a header cell in a table</p>
+                    <p><span> &lt;tr&gt;</span> - Defines a row in a table</p>
+                    <p><span> &lt;td&gt;</span> - Defines a cell in a table</p>
+                    <p><span> &lt;thead&gt;</span> - Groups the header content in a table</p>
+                    <p><span> &lt;tbody&gt;</span> - Groups the body content in a table</p>
+                    <p><span> &lt;tfoot&gt;</span> - Groups the footer content in a table</p>
+                </div>
+            </div>
+            <button id="btn"><a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">Learn
+                    more</a></button>
+        </section>
+        <section class="Hf" id="Hf">
+            <h2>HTML Forms</h2>
+            <div class="content">
+                <div class="card">
+                    <h3>Form Elements</h3>
+                    <div class="flay">
+                        <p><b>&lt;form action = ""&gt;</b></p>
+                        <p class="inner"><b>&lt;label</b> for = "id" <b>&gt;</b> Username:<b>&lt;/label&gt;</b>
+                        </p>
+                        <p class="inner"><b>&lt;input</b> type = "text" name = "name" id = "id" value =
+                            "John"<b>/&gt;</b></p>
+                        <p class="inner"><b>&lt;label</b> for = "id" <b>&gt;</b> Password:<b>&lt;/label&gt;</b>
+                        </p>
+                        <p class="inner"><b>&lt;input</b> type = "password" id = "id" value =
+                            "pass"<b>/&gt;</b></p>
+                        <p class="inner"><b>&lt;button</b> type = "submit"<b>&gt;</b> Submit <b>&lt;/button&gt;</b></p>
+                        <p><b>&lt;/form&gt;</b></p>
+                    </div>
+                </div>
+                <div class="card cds">
+                    <h3>Form Attributes</h3>
+                    <p><span> action</span> - defines the action to be performed when the form is submitted.</p>
+                    <p><span> target </span> - specifies where to display the response.</p>
+                    <p><span> method </span> - specifies the HTTP method to be used.</p>
+                    <p><span> autocomplete </span> - specifies whether a form should have autocomplete.</p>
+                    <p><span> novalidate</span> - specifies that the form-data should not be validated </p>
+                </div>
+                <div class="card">
+                    <h3>Select Tag</h3>
+                    <p>The <span>&lt;select&gt;</span> element defines a drop-down list:</p>
+                    <div class="slay">
+                        <p><b>&lt;select</b> id = "id"<b>&gt;</b></p>
+                        <p class="inner"><b>&lt;option value = "volvo" &gt;</b>Volvo<b>&lt;/option&gt;</b></p>
+                        <p class="inner"><b>&lt;option value = "Ferari" &gt;</b>Ferari<b>&lt;/option</b></p>
+                        <p class="inner"><b>&lt;option value = "audi" &gt;</b>Audi<b>&lt;/option</b></p>
+                        <p><b>&lt;/select&gt;</b></p>
+                    </div>
+                </div>
+                <div class="crds cds">
+                    <h3>Input Tag</h3>
+                    <p><span> &lt;input type = "text"&gt;</span> - single-line text input field.</p>
+                    <p><span> &lt;input type = "password"&gt;</span> - defines a password field</p>
+                    <p><span> &lt;input type = "email"&gt;</span> - input fields that should contain an e-mail address.
+                    </p>
+                    <p><span> &lt;input type = "date"&gt;</span> - for input fields that should contain a date.</p>
+                    <p><span> &lt;input type = "radio"&gt;</span> - defines a radio button.</p>
+                    <p><span> &lt;input type = "checkbox"&gt;</span> - defines a checkbox.</p>
+                    <p><span> &lt;input type = "file"&gt;</span> - file-select field and a "Browse" button for file
+                        uploads.</p>
+                    <p><span> &lt;input type = "color"&gt;</span> - input fields that should contain a color.</p>
+                </div>
+                <div class="card">
+                    <h3>Text Area</h3>
+                    <p>The <span>&lt;textarea&gt;</span> element defines a multi-line input field (a text area):</p>
+                    <div class="tlay">
+                        <b>&lt;textarea</b> name="message" rows="10" cols="30" <b>&gt;</b>
+                        The cat was playing in the garden.
+                        <b>&lt;/textarea&gt;</b>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>
+                    This website is a complete reference for HTML basics including tags,
+                    lists, tables, and forms. Built for learning and revision.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#Bt">Basic Tags</a></li>
+                    <li><a href="#Hl">HTML Lists</a></li>
+                    <li><a href="#Ht">HTML Tables</a></li>
+                    <li><a href="#Hf">HTML Forms</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Docs</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 | Designed & Built by <strong>Sathu</strong></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

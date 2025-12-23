@@ -38,10 +38,7 @@
 
         tbody td {
             background-color: rgb(248, 255, 205);
-        }
-
-        tbody .col {
-            background-color: #CCFF33;
+            padding: 10px;
         }
 
         th,
@@ -56,6 +53,22 @@
         th:hover {
             background-color: rgb(211, 234, 254);
         }
+
+        .lab td {
+            background-color: #F9EFA4;
+        }
+
+        .time th {
+            background-color: #99CCFF;
+        }
+
+        .hed {
+            background-color: #E2E2E2 !important;
+        }
+
+        tbody .col {
+            background-color: #CCFF33;
+        }
     </style>
 </head>
 
@@ -64,154 +77,358 @@
     <table>
         <thead>
             <tr>
-                <th rowspan="2">Theory</th>
-                <th>Start</th>
-                <th>9.00</th>
-                <th>10.00</th>
-                <th>11.00</th>
-                <th>12.00</th>
+                <th rowspan="2" class="hed">Theory</th>
+                <th class="hed">Start</th>
+                <th>08:00</th>
+                <th>09:00</th>
+                <th>09:01</th>
+                <th>10:00</th>
+                <th>10:01</th>
+                <th>11:00</th>
+                <th>11:01</th>
+                <th>12:00</th>
+                <th>12:01</th>
+                <th>13:00</th>
                 <th>LUNCH</th>
-                <th>14.00</th>
-                <th>15.00</th>
-                <th>16.00</th>
-                <th>17.00</th>
+                <th>14:00</th>
+                <th>14:01</th>
+                <th>15:00</th>
+                <th>15:01</th>
+                <th>16:00</th>
+                <th>16:01</th>
+                <th>17:00</th>
+                <th>17:01</th>
                 <th>18.00</th>
+                <th>19.00</th>
             </tr>
             <tr>
-                <th>End</th>
-                <th>9.50</th>
-                <th>10.50</th>
-                <th>11.50</th>
-                <th>12.50</th>
+                <th class="hed">End</th>
+                <th>8:50</th>
+                <th>9:50</th>
+                <th>9:51</th>
+                <th>10:50</th>
+                <th>10:51</th>
+                <th>11:50</th>
+                <th>11:51</th>
+                <th>12:50</th>
+                <th>12:51</th>
+                <th>13:50</th>
                 <th>LUNCH</th>
-                <th>14.50</th>
-                <th>15.50</th>
-                <th>16.50</th>
-                <th>17.50</th>
-                <th>18.50</th>
+                <th>14:50</th>
+                <th>14:51</th>
+                <th>15:50</th>
+                <th>15:51</th>
+                <th>16:50</th>
+                <th>16:51</th>
+                <th>17:50</th>
+                <th>17:51</th>
+                <th>18:50</th>
+                <th>19:30</th>
             </tr>
-            <tr>
-                <th rowspan="2">Lab</th>
-                <th>Start</th>
-                <th>9.00</th>
-                <th>10.00</th>
-                <th>11.00</th>
-                <th>12.00</th>
+            <tr class="time">
+                <th rowspan="2" class="hed">Lab</th>
+                <th class="hed">Start</th>
+                <th>08:00</th>
+                <th>09:00</th>
+                <th>09:01</th>
+                <th>10:00</th>
+                <th>10:01</th>
+                <th>11:00</th>
+                <th>11:01</th>
+                <th>12:00</th>
+                <th>12:01</th>
+                <th>13:00</th>
                 <th>LUNCH</th>
-                <th>14.00</th>
-                <th>15.00</th>
-                <th>16.00</th>
-                <th>17.00</th>
-                <th>18.00</th>
+                <th>14:00</th>
+                <th>14:01</th>
+                <th>15:00</th>
+                <th>15:01</th>
+                <th>16:00</th>
+                <th>16:01</th>
+                <th>17:00</th>
+                <th>17:01</th>
+                <th>18:00</th>
+                <th>19:00</th>
             </tr>
-            <tr>
-                <th>End</th>
-                <th>9.50</th>
-                <th>10.40</th>
-                <th>11.50</th>
-                <th>12.40</th>
+            <tr class="time">
+                <th class="hed">End</th>
+                <th>8:50</th>
+                <th>9:50</th>
+                <th>9:51</th>
+                <th>10:40</th>
+                <th>10:41</th>
+                <th>11:50</th>
+                <th>11:51</th>
+                <th>12:40</th>
+                <th>12:41</th>
+                <th>13:30</th>
                 <th>LUNCH</th>
-                <th>14.50</th>
-                <th>15.40</th>
-                <th>16.50</th>
-                <th>17.40</th>
-                <th>18.50</th>
+                <th>14:50</th>
+                <th>14:51</th>
+                <th>15:40</th>
+                <th>15:41</th>
+                <th>16:50</th>
+                <th>16:51</th>
+                <th>17:40</th>
+                <th>17:41</th>
+                <th>18:50</th>
+                <th>19:30</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th rowspan="2">Tue</th>
                 <th>Theory</th>
+                <td>TFF1</td>
                 <td class="col">A1-STS4006 <br> CB416</td>
+                <td>-</td>
                 <td class="col">B1-CSE1008 <br> CB524</td>
+                <td>-</td>
                 <td class="col">TC1-MAT2003 <br> CB113</td>
+                <td>G1</td>
                 <td class="col">D1-CSE4004 <br> CB510</td>
+                <td>-</td>
+                <td>-</td>
                 <th>LUNCH</th>
                 <td class="col">F2-FRL1001 <br> CBG-16</td>
-                <td colspan="4" title="Happy time">No Class Hours</td>
+                <td>-</td>
+                <td>A2</td>
+                <td>-</td>
+                <td>B2</td>
+                <td>-</td>
+                <td>TC2</td>
+                <td>G2</td>
+                <td>TDD2</td>
+                <td>-</td>
             </tr>
-            <tr>
+            <tr class="lab">
                 <th>Lab</th>
-                <td colspan="4" title="Happy time">-</td>
+                <td>L1</td>
+                <td>L2</td>
+                <td>-</td>
+                <td>L3</td>
+                <td>-</td>
+                <td>L4</td>
+                <td>-</td>
+                <td>L5</td>
+                <td>-</td>
+                <td>L6</td>
                 <th>LUNCH</th>
-                <td colspan="5" title="Happy time">No Labs</td>
-
+                <td>L31</td>
+                <td>-</td>
+                <td>L32</td>
+                <td>-</td>
+                <td>L33</td>
+                <td>-</td>
+                <td>L34</td>
+                <td>-</td>
+                <td>L35</td>
+                <td>L36</td>
             </tr>
 
             <tr>
                 <th rowspan="2">Wed</th>
                 <th>Theory</th>
+                <td>TGG1</td>
                 <td class="col">D1-CSE4004 <br> CB510</td>
+                <td>-</td>
                 <td class="col">F1-CSE2004 <br> CB513</td>
-                <td>No class</td>
+                <td>-</td>
+                <td>E1</td>
+                <td>SC2</td>
                 <td class="col">B1-CSE1008 <br> CB524</td>
+                <td>-</td>
+                <td>-</td>
                 <th>LUNCH</th>
-                <td colspan="5" title="Lab and Happy time">No class Hours</td>
+                <td>D2</td>
+                <td>-</td>
+                <td>TF2</td>
+                <td>G2</td>
+                <td>E2</td>
+                <td>SC1</td>
+                <td>B2</td>
+                <td>-</td>
+                <td>TCC2</td>
+                <td>-</td>
             </tr>
-            <tr>
+            <tr class="lab">
                 <th>Lab</th>
-                <td colspan="4" title="Happy time">-</td>
+                <td>L7</td>
+                <td>L8</td>
+                <td>-</td>
+                <td>L9</td>
+                <td>-</td>
+                <td>L10</td>
+                <td>-</td>
+                <td>L11</td>
+                <td>-</td>
+                <td>L12</td>
                 <th>LUNCH</th>
-                <td colspan="2" title="OT Lab" class="col">L37+L38-MAT2003 <br> CB122</td>
-                <td colspan="3" title="Happy time">No Labs</td>
+                <td class="col">L37-MAT2003<br>CB112</td>
+                <td>-</td>
+                <td class="col">L38-MAT2003<br>CB112</td>
+                <td>-</td>
+                <td>L39</td>
+                <td>-</td>
+                <td>L40</td>
+                <td>-</td>
+                <td>L41</td>
+                <td>L42</td>
 
             </tr>
             <tr>
                 <th rowspan="2">Thu</th>
                 <th>Theory</th>
+                <td>TEE1</td>
                 <td class="col">TC1-MAT2003 <br> CB113</td>
+                <td>-</td>
                 <td class="col">TD1-CSE4004 <br> CB510</td>
-                <td>No class</td>
+                <td>TG1</td>
+                <td>TAA1</td>
+                <td>ECS</td>
                 <td class="col">TBB1-CSE1008 <br> CB524</td>
+                <td>CLUB</td>
+                <td>-</td>
                 <th>LUNCH</th>
-                <td colspan="5" title="Lab and Happy time">No Class Hours</td>
+                <td>TE2</td>
+                <td>SE1</td>
+                <td>C2</td>
+                <td>-</td>
+                <td>A2</td>
+                <td>-</td>
+                <td>TD2</td>
+                <td>TG2</td>
+                <td>TGG2</td>
+                <td>-</td>
             </tr>
-            <tr>
+            <tr class="lab">
                 <th>Lab</th>
-                <td colspan="4" title="Happy time">-</td>
+                <td>L13</td>
+                <td>L14</td>
+                <td>-</td>
+                <td>L15</td>
+                <td>-</td>
+                <td>L16</td>
+                <td>-</td>
+                <td>L17</td>
+                <td>-</td>
+                <td>L18</td>
                 <th>LUNCH</th>
-                <td colspan="2" title="OT Lab" class="col">L37+L38-MAT2003 <br> CB122</td>
-                <td colspan="3" title="Happy time">No Labs</td>
+                <td class="col">L43-CSE4004 <br> CB502B</td>
+                <td>-</td>
+                <td class="col">L44-CSE4004 <br> CB502B</td>
+                <td>-</td>
+                <td>L45</td>
+                <td>-</td>
+                <td>L46</td>
+                <td>-</td>
+                <td>L47</td>
+                <td>L48</td>
 
             </tr>
             <tr>
                 <th rowspan="2">Fri</th>
                 <th>Theory</th>
+                <td>TCC1</td>
+                <td>-</td>
                 <td class="col">TA1-STS4006 <br> CB416</td>
+                <td>-</td>
                 <td class="col">TB1-CSE1008 <br> CB524</td>
+                <td>-</td>
                 <td class="col">F1-CSE2004 <br> CB513</td>
-                <td>No class</td>
+                <td>-</td>
+                <td>TE1</td>
+                <td>SD2</td>
                 <th>LUNCH</th>
-                <td colspan="3" title="Happy time">No Class Hours</td>
+                <td>C2</td>
+                <td>-</td>
+                <td>TB2</td>
+                <td>-</td>
+                <td>TA2</td>
+                <td>-</td>
                 <td class="col">F2-FRL1001 <br> CBG16</td>
-                <td>No Class</td>
+                <td>-</td>
+                <td>TEE2</td>
+                <td>-</td>
             </tr>
-            <tr>
+            <tr class="lab">
                 <th>Lab</th>
-                <td colspan="4" title="Happy time">-</td>
+                <td>L19</td>
+                <td>L20</td>
+                <td>-</td>
+                <td>L21</td>
+                <td>-</td>
+                <td>L22</td>
+                <td>-</td>
+                <td>L23</td>
+                <td>-</td>
+                <td>L24</td>
                 <th>LUNCH</th>
-                <td colspan="5" title="Happy time">-</td>
-
+                <td>L49</td>
+                <td>-</td>
+                <td>L-50</td>
+                <td>-</td>
+                <td>L51</td>
+                <td>-</td>
+                <td>L52</td>
+                <td>-</td>
+                <td>L53</td>
+                <td>L54</td>
             </tr>
             <tr>
                 <th rowspan="2">Sat</th>
                 <th>Theory</th>
-                <td class="col">No Class</td>
+                <td>TDD1</td>
+                <td>E1</td>
+                <td>SE2</td>
                 <td class="col">C1-MAT2003 <br> CB113</td>
+                <td>-</td>
                 <td class="col">TF1-CSE2004 <br> CB513</td>
+                <td>G1</td>
                 <td class="col">A1-STS4006 <br> CB416</td>
+                <td>-</td>
+                <td>-</td>
                 <th>LUNCH</th>
-                <td colspan="5" title="Happy time" rowspan="2">No Class and Lab Hours</td>
+                <td>D2</td>
+                <td>-</td>
+                <td>E2</td>
+                <td>SD1</td>
+                <td>TAA2</td>
+                <td>ECS</td>
+                <td>TBB2</td>
+                <td>CLUB</td>
+                <td>TFF2</td>
+                <td>-</td>
+
             </tr>
-            <tr>
+            <tr class="lab">
                 <th>Lab</th>
-                <td colspan="4" title="Happy time">-</td>
+                <td>L25</td>
+                <td>L26</td>
+                <td>-</td>
+                <td>L27</td>
+                <td>-</td>
+                <td>L28</td>
+                <td>-</td>
+                <td>L29</td>
+                <td>-</td>
+                <td>L30</td>
                 <th>LUNCH</th>
+                <td>L55</td>
+                <td>-</td>
+                <td>L-56</td>
+                <td>-</td>
+                <td>L57</td>
+                <td>-</td>
+                <td>L58</td>
+                <td>-</td>
+                <td>L59</td>
+                <td>L60</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="12">All the data is Verified</th>
+                <th colspan="23">All the data is Verified</th>
             </tr>
         </tfoot>
     </table>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Objects
+        /*const student = {
+            name: "Sathvik",
+            age: 20,
+            marks: [90, 90, 89, 84, 85.5, 58],
+            display() {
+                console.log(`Name: ${this.name}, Age : ${this.age} , marks: ${this.marks}`);
+            }
+        };
+        student.display();
+       
+        let arr = [17, 12, 14, 18, 9, 4, 13];
+        arr.push(16);
+        console.log(arr);
+        arr.sort(function (a, b) { return a - b });
+        console.log(arr);
+        arr.pop();
+        arr.unshift(5);
+        console.log(arr);
+        arr.reverse();
+        arr.shift();
+        console.log(arr);
+        arr.splice(1, 0, 21);
+        console.log(arr)
+        console.log(arr.slice(2, 5))
+         
+
+        let nums = [1, 2, 3, 4, 5];
+        console.log(nums.map(n => n ** 2))
+        console.log(nums.filter(n => n > 2))
+        console.log(nums.reduce((total, n) => total * n, 1));
+       
+
+        //Create an array of users:
+            name,age,skills
+            Then:
+            ✔ filter users above 18
+            ✔ map their names
+            ✔ calculate average age using reduce
+        */
+        const users = [
+            { name: "sathvik", age: 20, skills: ["Eating", "Coding"] },
+            { name: "Saranya", age: 16, skills: ["Eating", "Sleeping"] },
+            { name: "Saru", age: 12, skills: ["Dancing", "Sleeping"] }
+        ];
+        console.log(users.filter(user => user.age > 18).map(user => user.name));
+        console.log(users.reduce((total, user) => total + user.age, 0) / users.length)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .date {
+            width: 90%;
+            height: 15vh;
+            margin: auto;
+            padding: 20px;
+            background-color: rgb(252, 248, 244);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .box {
+            color: whitesmoke;
+            font-weight: 600;
+            width: 10%;
+            height: 30%;
+            background-color: rgb(131, 138, 5);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="revs">Enter the text: </label>
+    <input type="text" name="text" id="revs" placeholder="Enter the text">
+    <br>
+    <br>
+    <button id="btn">Reverse</button>
+    <p id="output"></p>
+    <div style="height: 100px;"></div>
+    <div class="date">
+        <div class="box box1"></div>
+        <div class="box box2">Month</div>
+        <div class="box box3">Day</div>
+        <div class="box box4">Hours</div>
+        <div class="box box5">Mins</div>
+        <div class="box box6">Secs</div>
+    </div>
+    <script>
+        const output = document.getElementById('output');
+        const btn = document.getElementById('btn');
+        const text = document.getElementById('revs');
+        btn.addEventListener('click', () => {
+            a = revs(text.value);
+            output.innerHTML = `There are ${a.count} letters in the word and the reverse of the word is ${a.reverse}`
+        })
+        function revs(a) {
+            let rev = "";
+            let i = 0;
+            for (i = a.length - 1; i >= 0; i--) {
+                rev = rev + a[i];
+            }
+            return { "reverse": rev, "count": a.length };
+        }
+
+        function updateTime() {
+            const now = new Date();
+            document.querySelector(".box1").innerText = "Year : " + now.getFullYear();
+            document.querySelector(".box2").innerText = "Month: " + (now.getMonth() + 1);
+            document.querySelector(".box3").innerText = "Day: " + now.getDate();
+            document.querySelector(".box4").innerText =
+                "Hours:" + String(now.getHours()).padStart(2, "0");
+            document.querySelector(".box5").innerText =
+                "Minutes: " + String(now.getMinutes()).padStart(2, "0");
+            document.querySelector(".box6").innerText =
+                "Second: " + String(now.getSeconds()).padStart(2, "0");
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+        console.log(((60 + 36.8) * 0.25) + ((13.8 + 13.8 + 29 + 34.2) * 0.75))
+
+    </script>
+</body>
+
+</html>

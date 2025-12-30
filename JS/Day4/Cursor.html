@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            width: 20px;
+            height: 20px;
+            background-color: rgba(0, 0, 0, 0.19);
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <h2></h2>
+    <script>
+        const d = document.querySelector('h2');
+        window.addEventListener('mousemove', (e) => {
+            if (window.screen.availWidth - 15 > e.clientX && window.screen.availHeight - 110 > e.clientY) {
+                d.style.top = e.clientY - 25 + "px";
+                d.style.left = e.clientX - 5 + "px";
+            }
+        })
+    </script>
+</body>
+
+</html>

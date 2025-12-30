@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan</title>
+    <script src="https://kit.fontawesome.com/4bff53bb5a.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .fan-control {
+            margin: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .fanbox {
+            padding: 20px;
+
+        }
+
+        .fan {
+            color: white;
+            font-size: 80px;
+            display: inline-block;
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .spin {
+            animation: spin 1s linear infinite;
+        }
+
+        .blast {
+            animation: blast 0.5s linear forwards;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes blast {
+            to {
+                transform: translateY(300px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .btns {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 10px;
+            background-color: blanchedalmond;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .btn:hover {
+            box-shadow: 0px 0px 8px 6px rgba(255, 255, 255, 0.35);
+            transform: scale(1.10);
+        }
+
+        .Warning {
+            color: White;
+            font-size: 40px;
+            padding: 15px;
+            margin: 20px;
+        }
+
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+
+        .shake {
+            animation: shake 0.3s ease-in-out 3;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0) rotate(0);
+            }
+
+            25% {
+                transform: translateX(-5px) rotate(-5deg);
+            }
+
+            50% {
+                transform: translateX(5px) rotate(5deg);
+            }
+
+            75% {
+                transform: translateX(-5px) rotate(-5deg);
+            }
+
+            100% {
+                transform: translateX(0) rotate(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fan-control">
+        <div class="fanbox">
+            <i class="fa-solid fa-fan fa-2xl fan"></i>
+        </div>
+        <div class="btns">
+            <button class="btn" id="on">On Fan</button>
+            <button class="btn" id="off">Off Fan</button>
+            <button class="btn" id="inc">Increase Speed</button>
+            <button class="btn" id="dec">Decrease Speed</button>
+        </div>
+        <p class="Warning"></p>
+    </div>
+    <script src="fan.js"></script>
+</body>
+
+</html>

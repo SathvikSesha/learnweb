@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC JAVASCRIPT</title>
+
+    <style>
+        body {
+            height: 200vh;
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+            color: white;
+            text-align: center;
+            animation: fade 0.3s ease-in;
+        }
+
+        .btn {
+            position: relative;
+            text-align: center;
+            margin-top: 20%;
+            animation: move 0.3s ease-in;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes move {
+            from {
+                bottom: -50px;
+            }
+
+            to {
+                bottom: 0;
+            }
+        }
+
+        .t {
+            position: absolute;
+            top: 30%;
+            left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="del">Delete</button>
+
+    <script>
+        const del = document.querySelector('.del');
+
+        del.addEventListener('click', () => {
+            del.disabled = true;
+            if (document.querySelector('.popup')) return;
+            const div = document.createElement('div');
+            div.classList.add('popup');
+            document.body.appendChild(div);
+            const btn = document.createElement('button');
+            div.appendChild(btn);
+            btn.textContent = "Do you want to delete?"
+            btn.classList.add('btn');
+            btn.addEventListener('click', () => {
+                btn.remove();
+                const t = document.createElement('h3');
+                t.textContent = "The thing is deleted!!";
+                div.appendChild(t);
+                t.classList.add('t')
+                setTimeout(() => {
+                    div.remove();
+                }, 2000);
+                del.disabled = false;
+            })
+        });
+    </script>
+
+</body>
+
+</html>

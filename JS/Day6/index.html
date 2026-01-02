@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some extra JS</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <button class="btn">Click me 1</button>
+        </div>
+        <div class="box2">
+            <button class="btn">Click me 2</button>
+        </div>
+        <div class="box3">
+            <button class="btn">Click me 3</button>
+        </div>
+    </div>
+    <script>
+        const container = document.querySelector('.container');
+        container.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                console.log(e.target.textContent);
+            }
+        })
+
+    </script>
+</body>
+
+</html>

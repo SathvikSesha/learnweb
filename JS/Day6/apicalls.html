@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API CALLS</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px 12px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>User Details</h1>
+    <p class="msg"></p>
+    <table class="users"></table>
+    <button class="btn">Load data</button>
+    <button class="retry" style="display:none;">Retry</button>
+
+    <script>
+        const msg = document.querySelector('.msg');
+        const table = document.querySelector('.users');
+        const btn = document.querySelector('.btn');
+        const retry = document.querySelector('.retry');
+
+        btn.addEventListener('click', loadUsers);
+        retry.addEventListener('click', () => location.reload());
+
+        async function loadUsers() {
+            msg.innerText = "Loading...";
+            table.innerHTML = "";
+            btn.disabled = true;
+
+            try {
+                const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch");
+                }
+
+                const data = await response.json();
+                msg.innerText = "";
+
+                table.innerHTML = `
+                    <tr>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                    </tr>
+                `;
+
+                // Table rows
+                data.forEach(user => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${user.name}</td>
+                        <td>${user.email}</td>
+                    `;
+                    table.appendChild(row);
+                });
+
+                retry.style.display = "inline-block";
+
+            } catch (err) {
+                msg.innerText = "Failed to load the data";
+                console.error("Error:", err);
+                btn.disabled = false;
+            }
+        }
+
+        /*function selectRandom() {
+            const choice = ["rock", "paper", "scissors"];
+            let index = Math.floor(Math.random() * choice.length);
+            console.log(choice[index])
+            choice.forEach((c, index) => {
+                console.log(index, c);
+            })
+        }
+        let i = 0;
+        const intervalId = setInterval(() => {
+            selectRandom();
+            i++;
+            if (i == 10) {
+                clearInterval(intervalId);
+            }
+        }, 1000);
+        */
+
+    </script>
+
+</body>
+
+</html>

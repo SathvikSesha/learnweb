@@ -1,0 +1,270 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3f3e68, #485068, #5c546e, #3a3548);
+  color: #f5f5f5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 400% 400%;
+  animation: backdrops 20s ease infinite;
+}
+
+@keyframes backdrops {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Background container */
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Common dot style */
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 0 0 2px 5px rgba(225, 255, 255, 0.7);
+  animation: float 8s linear infinite;
+  top: 100%;
+}
+
+/* Individual dot positions + sizes */
+.dot1 {
+  left: 10%;
+  animation-duration: 6s;
+}
+
+.dot2 {
+  left: 90%;
+  width: 14px;
+  height: 14px;
+  animation-duration: 9s;
+}
+
+.dot3 {
+  left: 25%;
+  width: 8px;
+  height: 8px;
+  animation-duration: 7s;
+}
+
+.dot4 {
+  left: 70%;
+  width: 12px;
+  height: 12px;
+  animation-duration: 10s;
+}
+
+.dot5 {
+  width: 6px;
+  height: 6px;
+  animation-duration: 5s;
+  left: 45%;
+}
+
+.dot6 {
+  width: 16px;
+  height: 16px;
+  animation-duration: 11s;
+  left: 55%;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Container */
+.container {
+  width: 70vw;
+  max-width: 800px;
+  padding: 2rem 2.5rem;
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+/* Heading */
+.container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: rgb(127, 255, 127);
+  letter-spacing: 1px;
+}
+.container h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: rgb(127, 255, 127);
+  letter-spacing: 1px;
+}
+/* Form */
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+/* Inputs & Select */
+.form input,
+.form select {
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  color: #dfe3f7;
+  outline: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+/* Input focus */
+.form input:focus,
+.form select:focus {
+  border-color: rgb(127, 255, 127);
+  box-shadow: 0 0 10px rgba(127, 255, 127, 0.4);
+}
+
+/* Placeholder */
+.form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Radio container */
+.radios {
+  grid-column: span 1;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/* Radio labels */
+.radios label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* Radio input */
+.radios input[type="radio"] {
+  accent-color: rgb(127, 255, 127);
+  cursor: pointer;
+}
+
+/* Select full width */
+.form select {
+  grid-column: span 1;
+}
+.form select option {
+  background-color: #000;
+  border-radius: 10px;
+}
+/* Button */
+.form button {
+  grid-column: span 1;
+  padding: 0.9rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgb(127, 255, 127), rgb(80, 200, 120));
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(127, 255, 127, 0.6);
+}
+
+.form input:hover,
+select:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 10px rgba(204, 254, 204, 0.6);
+}
+
+/* Message */
+.container p {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+  color: #ffb3b3;
+}
+
+/* Users list */
+.container ul {
+  margin-top: 1.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* User item */
+.container li {
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 90vw;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form select,
+  .form button,
+  .radios {
+    grid-column: span 1;
+  }
+}

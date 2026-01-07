@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AddTask from "./Components/AddTask";
 import DisplayTasks from "./Components/DisplayTasks";
+import "./Css/Taskhome.css";
 function TaskHome() {
   const [tasks, setTasks] = useState([]);
   const [msg, setMsg] = useState("");
@@ -11,6 +12,7 @@ function TaskHome() {
 
   const deleteTask = (id) => {
     setTasks((prev) => prev.filter((task) => task.id !== id));
+    setMsg("Task Deleted Successfully!!");
   };
 
   const toggleState = (id) => {
@@ -31,7 +33,7 @@ function TaskHome() {
 
   return (
     <>
-      <div className="Container">
+      <div className="container">
         <h1>Task Manager</h1>
         <h3>Here you can keep your daily tasks</h3>
         <AddTask onAdd={addTask} onMsg={setMsg}></AddTask>

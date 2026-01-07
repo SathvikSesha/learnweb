@@ -1,0 +1,42 @@
+.form {
+  display: flex;
+  gap: 1.2rem;
+}
+.form input {
+  width: 60%;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  color: #fafafc;
+  outline: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form input:focus {
+  border-color: rgb(127, 255, 127);
+  box-shadow: 0 0 10px rgba(127, 255, 127, 0.4);
+}
+
+.form input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form button {
+  padding: 0.9rem;
+  width: 25%;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgb(127, 255, 127), rgb(138, 76, 49));
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(127, 255, 127, 0.6);
+}

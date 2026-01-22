@@ -1,4 +1,4 @@
-import Profile from "./profile.jsx";
+import Profile from "./Profile.jsx";
 
 function App() {
   return (

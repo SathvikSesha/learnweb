@@ -1,0 +1,78 @@
+.calc {
+  width: 320px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+input {
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  text-align: right;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+.equals {
+  grid-column: span 4;
+  background: #4caf50;
+  color: white;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* DARK MODE */
+.calc.dark {
+  background: #1e1e1e;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.calc.dark input {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+.calc.dark button {
+  background: #333;
+  color: white;
+}
+
+.calc.dark button:hover {
+  background: #444;
+}
+
+.calc.dark .equals {
+  background: #00c853;
+  color: black;
+}

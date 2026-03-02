@@ -3,8 +3,15 @@ import AddTask from "./Components/AddTask";
 import DisplayTasks from "./Components/DisplayTasks";
 import "./Css/Taskhome.css";
 function TaskHome() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const saved = localStorage.getItem("tasks");
+    return saved ? JSON.parse(saved) : [];
+  });
   const [msg, setMsg] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const addTask = (task) => {
     setTasks((prev) => [...prev, task]);

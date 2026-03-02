@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form>
+        <label>
+            Name:
+            <input type="text" name="name" id="name" placeholder="Enter your name " required>
+        </label>
+        <label>
+            Email:
+            <input type="email" name="name" id="email" placeholder="Enter you email " required>
+        </label>
+        <label>
+            Date of Birth:
+            <input type="date" name="dob" id="dob" required>
+        </label>
+        <button type="submit">submit</button>
+    </form>
+    <div>
+        <table class="users">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>email</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        const list = document.querySelector('.users');
+
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+
+        const user = {
+            name: "",
+            email: "",
+            age: null
+        };
+
+        const dobInput = document.querySelector('#dob');
+        const today = new Date().toISOString().split('T')[0];
+        dobInput.max = today;
+
+        document.querySelector('#name').addEventListener('input', (e) => {
+            user.name = e.target.value;
+        });
+
+        document.querySelector('#email').addEventListener('input', (e) => {
+            user.email = e.target.value;
+        });
+
+        dobInput.addEventListener('input', (e) => {
+            const dob = new Date(e.target.value);
+            const today = new Date();
+
+            let age = today.getFullYear() - dob.getFullYear();
+            const monthDiff = today.getMonth() - dob.getMonth();
+
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+
+            user.age = age;
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (user.age === null || user.age < 0) {
+                alert("Invalid DOB");
+                return;
+            }
+
+            users.push({ ...user });
+            localStorage.setItem('users', JSON.stringify(users));
+
+            form.reset();
+            user.age = null;
+
+            render();
+        });
+
+        function render() {
+            if (users.length === 0) {
+                list.style.display = 'none';
+                return;
+            }
+
+            list.style.display = 'table';
+            list.innerHTML = `
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>`;
+
+            users.forEach(u => {
+                const trow = document.createElement('tr');
+                trow.innerHTML = `
+                <td>${u.name}</td>
+                <td>${u.age}</td>
+                <td>${u.email}</td>
+            `;
+                list.appendChild(trow);
+            });
+        }
+
+        render();
+    </script>
+
+
+</body>
+
+</html>

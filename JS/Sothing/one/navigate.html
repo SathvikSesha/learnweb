@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    <h1 id="welcome-msg"></h1>
+
+    <script>
+        const displayName = document.querySelector("#welcome-msg");
+        const storedData = JSON.parse(localStorage.getItem("regform"));
+
+        if (storedData) {
+            const infoString = Object.values(storedData).join("<br>");
+            displayName.innerHTML = `Hello ${storedData.name}!<br>${infoString}`;
+        } else {
+            displayName.textContent = "Hello Guest";
+        }
+    </script>
+</body>
+
+</html>

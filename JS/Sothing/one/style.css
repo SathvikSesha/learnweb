@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.registration {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  width: 320px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.registration div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #232323;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#msg {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+a {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 20px;
+}
+
+#welcome-msg {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  line-height: 2;
+  font-size: 1.2rem;
+}
